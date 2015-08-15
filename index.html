@@ -17,14 +17,6 @@
     height: 100%;
  }
 
- #background {
- 	width: 100%;
- 	height: 100%;
- 	position: relative;
- 	z-index: 12;
- }
-
-
  #top-banner {
  	width: 100%;
  	height: 100%;
@@ -38,18 +30,11 @@
  	margin: auto;
  	color: black;
  	z-index: 11;
-
-/* 	animation-duration: 3s;
-  	animation-name: slidein;*/
-
-/*    animation-name: shake;
-    animation-duration: 0.5s;*/
  
     animation-name: boinboin;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-delay: 4s;
-
  }
 
 
@@ -77,35 +62,20 @@
   		}
 }
 
-@keyframes shake {
-  	0% {
-    transform: translate(50px,50px);
-  		}
-	25% {
-    transform: translate(50px,-50px);
-  }
-	50% {
-    transform: translate(-50px,-50px);
-  }
-  	75% {
-    transform: translate(-50px,50px);
-	}
-  	100% {
-    transform: translate(0px,0px);
-  }
-}
+
 
 #animal{
 	font-size: 400%;
 	/*font-weight: bold;*/
 	text-align: center;
 
-	text-shadow: 0.5px 0.5px #ffffff, 1px 1px #000000;
+	text-shadow: 1px 1px #ffffff, 2px 2px #000000;
 
 	vertical-align: center;
 
     animation-name: boinboin;
     animation-duration: 3s;
+
     animation-iteration-count: infinite;
 }
 
@@ -118,6 +88,10 @@
 	border-style: solid;
 	border-width: 3px;
 
+    animation-name: swing;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
 }
 
 #objectChineseTranslate{
@@ -128,6 +102,11 @@
 	text-align: center;
 	border-style: solid;
 	border-width: 3px;
+
+    animation-name: swing;
+    animation-duration: 11s;
+	animation-delay: 2s;
+    animation-iteration-count: infinite;
 }
 
 #colorChineseTranslate{
@@ -139,7 +118,37 @@
 	border-style: solid;
 	border-width: 3px;
 	text-shadow: 0.5px 0.5px #ffffff, 1px 1px #000000;
+
+    animation-name: swing;
+    animation-duration: 12s;
+	animation-delay: 3s;
+    animation-iteration-count: infinite;
 }
+
+@keyframes swing {
+	0% {
+    	transform: translate(0px,0px);
+		}
+	10% {
+    	transform: translate(-15px,0px);
+		}
+	20% {
+    	transform: translate(10px,0px);
+		}
+	30% {
+  	  	transform: translate(-5px,0px);
+  		}
+  	40% {
+    	transform: translate(0px,0px);
+		}
+  	50%{
+    	transform: translate(0px,0px);
+  		}
+  	100%{
+    	transform: translate(0px,0px);
+  		}
+}
+
 </style>
 
 <script type="text/javascript">
@@ -403,12 +412,8 @@ console.log("Inside showAnimals(). You have clicked " + clickCount + "times.") ;
 	document.getElementById("colorChineseTranslate").style.visibility = "visible";
 	document.getElementById("colorChineseTranslate").style.backgroundColor = ranNamedColor["colorHex"] ;
 	document.getElementById("colorChineseTranslate").innerHTML = ranNamedColor["colorName"] + " 依隻顏色嘅中文" ;
-
-
-// https://www.google.com/search?q=fish&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMIke2e5r2rxwIVzluOCh1MjA7T&qscrl=1
-// https://www.google.com/search?q=sheep&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMIoInohr6rxwIVDB6OCh2R2ABG&qscrl=1
-
 }
+
 
 function imageSearch(){
 	url = "https://www.google.com/search?q=" + ranAnimal["animalName"] + "&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&qscrl=1" ;
@@ -416,11 +421,13 @@ function imageSearch(){
   win.focus();
 }
 
+
 function objectChineseTranslate(){
 	url = "https://translate.google.com/#en/zh-TW/" + ranAnimal["animalName"].toLowerCase() ;
   var win = window.open(url, '_blank');
   win.focus();
 }
+
 
 function colorChineseTranslate(){
 	url = "https://translate.google.com/#en/zh-TW/" + ranNamedColor["colorName"].toLowerCase() ;
@@ -428,64 +435,18 @@ function colorChineseTranslate(){
   win.focus();
 }
 
-
-// var m = document.querySelectorAll('.mover');
-
-// if (m[0].style.motionOffset !== undefined) {
-//   var time = 9000;
-//   for (var i = 0, len = m.length; i < len; ++i) {
-//     var player = m[i].animate([
-//       { motionOffset: '100%' },
-//       { motionOffset: 0 }
-//     ], {
-//       duration: time,
-//       iterations: Infinity,
-//       fill: 'both',
-//       easing: 'ease-in',
-//       delay: time * (i / m.length)
-//     });
-//     var scaler = m[i].animate([
-//       { transform: 'scale(.01)', opacity: .01, offset: 0 },
-//       { transform: 'scale(1)', opacity: 1, offset: .01 },
-//       { transform: 'scale(.01)', opacity: .01, offset: 1 }
-//     ], {
-//       duration: time,
-//       iterations: Infinity,
-//       direction: 'normal',
-//       fill: 'both',
-//       easing: 'cubic-bezier(0.55,0.055,0.675,0.19)',
-//       delay: time * (i / m.length)
-//     });
-//   }
-// } else {
-//   document.documentElement.className = 'no-motionpath'
-// }
-
-
 </script>
-
 
 
 </head>
 <body>
-	<div id="background" onclick="appSelector()">
-		
-		<div id="top-banner">
+		<div id="top-banner" onclick="appSelector()">
 		&#x1f476; 朗朗—生日快樂 &#x1f476;	
 		</div>
 
-		<div id="animal" >
+		<div id="animal" onclick="appSelector()">
 			
 		</div>
-
-		<!-- 
-		<div class="mover"></div>
-		<div class="mover"></div>
-		 -->
- 	
-<!-- 		<svg id="rainbow">
-		    <path id="path" fill="#333333" stroke="#dddddd" stroke-width="9" stroke-linejoin="round" d="M248.761,92c0,9.801-7.93,17.731-17.71,17.731c-0.319,0-0.617,0-0.935-0.021c-10.035,37.291-51.174,65.206-100.414,65.206 c-49.261,0-90.443-27.979-100.435-65.334c-0.765,0.106-1.531,0.149-2.317,0.149c-9.78,0-17.71-7.93-17.71-17.731 c0-9.78,7.93-17.71,17.71-17.71c0.787,0,1.552,0.042,2.317,0.149C39.238,37.084,80.419,9.083,129.702,9.083    c49.24,0,90.379,27.937,100.414,65.228h0.021c0.298-0.021,0.617-0.021,0.914-0.021C240.831,74.29,248.761,82.22,248.761,92z" />
-		</svg> -->
 		<div id="imageSearch" onclick="imageSearch()">
 		</div>
 
@@ -494,7 +455,5 @@ function colorChineseTranslate(){
 
 		<div id="colorChineseTranslate" onclick="colorChineseTranslate()">
 		</div>
-
-	</div>
 </body>
 </html>
