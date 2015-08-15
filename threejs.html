@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="baby.png">
+
+	<title>&#x1f476; 朗朗—生日快樂 &#x1f476;</title>
+
+<style>
+ body {
+    width: 100%;
+    color: navy;
+    background-color: #ffffff;
+ }
+</style>
+
+
+</head>
+<body>
+<div id="top-banner">
+&#x1f476; 朗朗—生日快樂 &#x1f476;	
+</div>
+
+		<script src="http://threejs.org/build/three.min.js"></script>
+
+		<script src="http://threejs.org/examples/fonts/helvetiker_regular.typeface.js"></script>
+
+		<script>
+
+			var container;
+			var camera, scene, raycaster, renderer;
+
+			var mouse = new THREE.Vector2(), INTERSECTED;
+			var radius = 100, theta = 0;
+
+			init();
+			animate();
+
+			function init(){
+				;
+			}
+
+			function animate(){
+				;
+			}
+
+
+
+
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+			var renderer = new THREE.WebGLRenderer();
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			renderer.setClearColor( 0xeeeeee );
+			document.body.appendChild( renderer.domElement );
+
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+
+			camera.position.z = 5;
+
+			var render = function () {
+				requestAnimationFrame( render );
+
+				cube.rotation.x += 0.1;
+				cube.rotation.y += 0.1;
+
+				renderer.render(scene, camera);
+			};
+
+
+
+
+
+			render();
+
+ 				var theText = "&#x1f476; 朗朗—生日快樂 &#x1f476;"; // i % & j b 8
+
+				// var options = {
+				// 	size: 180,
+				// 	height: 20,
+				// 	curveSegments: 2,
+				// 	font: "helvetiker",
+				// 	bevelEnabled: false
+				// };
+
+				group = new THREE.Group();
+				scene.add( group );
+
+
+				var textMaterial = new THREE.MeshBasicMaterial( { color: new THREE.Color(0, 0, 1 ), overdraw: 0.5, wireframe: true, side: THREE.DoubleSide } );
+
+				textShapes = THREE.FontUtils.generateShapes( theText );
+
+				text3d = new THREE.ShapeGeometry( textShapes );
+
+				text3d.computeBoundingBox();
+				var centerOffset = -0.5 * ( text3d.boundingBox.max.x - text3d.boundingBox.min.x );
+				text = new THREE.Mesh( text3d, textMaterial );
+
+				text.position.x = centerOffset - 150;
+				group.add( text );
+
+
+		</script>
+</body>
+</html>

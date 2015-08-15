@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="baby.png">
+
+	<title>&#x1f476; 朗朗—生日快樂 &#x1f476;</title>
+
+<style>
+ html {
+ 	height: 100%;
+ }
+
+ body {
+    height: 100%;
+ }
+
+ #background {
+ 	width: 100%;
+ 	height: 100%;
+ 	position: relative;
+ 	z-index: 12;
+ }
+
+
+ #top-banner {
+ 	width: 100%;
+ 	text-align: center;
+ 	font-size: xx-large;
+ 	margin: auto;
+ 	color: black;
+ 	z-index: 11;
+ }
+
+#animal{
+	font-size: xx-large;
+	text-align: center;
+	vertical-align: center;
+}
+
+#rainbow {
+	width:100%;
+	height:100%;
+	position: absolute;
+	z-index: 10;
+	background-color: black;
+}
+
+#imageSearch{
+	width:50%;
+	display: none;
+	
+}
+
+#colorChineseLookup{
+	width:50%;
+	display: none;
+}
+
+/*
+ .center {
+ 	/*width: 100%;
+ 	margin: auto;
+ 	color: black;
+ }*/
+/*
+$light: #fafafd;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 30rem;
+}
+
+
+.mover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  motion-offset: 100%;
+  motion-path: path("M200 200 S 200.5 200.1 201 200.2 201.4 200.5 201.8 200.8 202.2 201.3 202.4 201.8 202.6 202.3 202.7 203 202.6 203.6 202.5 204.3 202.2 205 201.9 205.7 201.4 206.4 200.7 207 200 207.5 199.2 208 198.2 208.3 197.2 208.6 196.1 208.7 195 208.7 193.8 208.5 192.6 208.2 191.5 207.7 190.3 207.1 189.2 206.3 188.1 205.3 187.2 204.2 186.3 202.9 185.6 201.5 185 200 184.6 198.4 184.3 196.7 184.3 194.9 184.5 193.1 184.8 191.3 185.4 189.4 186.3 187.6 187.3 185.9 188.5 184.2 190 182.7 191.7 181.3 193.5 180 195.5 179 197.7 178.1 200 177.5 202.4 177.1 204.9 177 207.4 177.2 210 177.6 212.5 178.3 215 179.4 217.4 180.7 219.7 182.3 221.8 184.1 223.8 186.3 225.6 188.6 227.1 191.2 228.4 194 229.3 196.9 230 200 230.3 203.2 230.3 206.4 230 209.7 229.2 213 228.1 216.2 226.7 219.4 224.9 222.4 222.8 225.3 220.3 227.9 217.5 230.3 214.4 232.4 211.1 234.2 207.6 235.7 203.9 236.8 200 237.5 196 237.8 192 237.7 187.9 237.1 183.9 236.1 180 234.6 176.2 232.8 172.6 230.5 169.2 227.8 166 224.7 163.2 221.3 160.7 217.5 158.6 213.4 157 209.1 155.7 204.7 155 200 154.7 195.2 155 190.4 155.8 185.6 157.1 180.9 158.9 176.3 161.2 171.8 164 167.5 167.2 163.6 170.9 160 175 156.7 179.5 153.9 184.2 151.5 189.3 149.6 194.6 148.3 200 147.5 205.5 147.3 211.1 147.7 216.7 148.6 222.2 150.2 227.5 152.4 232.6 155.1 237.5 158.4 242 162.2 246.1 166.5 249.8 171.2 253 176.4 255.6 181.9 257.7 187.7 259.2 193.8 260 200 260.2 206.3 259.7 212.7 258.5 219 256.6 225.2 254.1 231.2 251 237 247.2 242.5 242.8 247.6 237.9 252.2 232.5 256.3 226.6 259.8 220.4 262.8 213.8 265 207 266.6 200 267.5 192.9 267.6 185.8 267 178.7 265.6 171.7 263.5 165 260.6 158.6 257 152.5 252.8 146.9 247.8 141.8 242.3 137.2 236.3 133.3 229.7 130.1 222.7 127.6 215.4 125.9 207.8 125 200 124.9 192.1 125.7 184.2 127.2 176.4 129.7 168.7 132.9 161.3 136.9 154.2 141.7 147.5 147.1 141.3 153.3 135.7 160 130.7 167.3 126.5 175 123 183.1 120.3 191.4 118.4 200 117.5 208.7 117.5 217.4 118.3 226 120.1 234.4 122.8 242.5 126.4 250.3 130.8 257.5 136.1 264.3 142.1 270.4 148.9 275.8 156.3 280.4 164.2 284.2 172.7 287.1 181.5 289 190.6 290 200 290 209.5 289 218.9 287 228.3 284 237.4 280.1 246.2 275.2 254.7 269.5 262.6 262.9 269.9 255.5 276.5 247.5 282.3 238.8 287.2 229.7 291.3 220.1 294.4 210.1 296.5 200 297.5 189.8 297.5 179.5 296.3 169.4 294.2 159.5 290.9 150 286.6 140.9 281.3 132.4 275.1 124.6 267.9 117.5 260 111.2 251.3 105.9 241.9 101.6 232 98.3 221.6 96.1 210.9 95 200 95.1 189 96.3 178 98.7 167.1 102.3 156.5 106.9 146.3 112.6 136.5 119.4 127.4 127.1 119 135.6 111.4 145 104.7 155.1 99.1 165.7 94.4 176.8 90.9 188.3 88.6 200 87.5 211.8 87.6 223.6 89 235.2 91.6 246.6 95.4 257.5 100.4 267.9 106.6 277.6 113.8 286.6 122 294.7 131.2 301.8 141.2 307.8 152 312.7 163.4 316.4 175.3 318.8 187.5 320 200 319.8 212.6 318.4 225.2 315.6 237.5 311.5 249.6 306.1 261.2 299.5 272.3 291.8 282.6 283 292.1 273.2 300.7 262.5 308.3 251 314.6 238.9 319.8 226.3 323.7 213.3 326.3 200 327.5 186.6 327.3 173.3 325.7 160.1 322.7 147.3 318.3 135 312.6 123.3 305.6 112.3 297.4 102.3 288 93.2 277.6 85.3 266.3 78.5 254.1 73 241.3 68.9 227.9 66.2 214.1 65 200 65.2 185.8 67 171.7 70.2 157.8 74.8 144.3 80.9 131.3 88.4 118.9 97.1 107.3 107 96.7 118 87.1 130 78.8 142.9 71.6 156.4 65.9 170.6 61.6 185.2 58.8 200 57.5 214.9 57.8 229.8 59.6 244.5 63 258.8 68 272.5 74.4 285.5 82.3 297.7 91.5 308.9 102 318.9 113.6 327.7 126.2 335.2 139.8 341.2 154.1 345.7 169 348.7 184.4 348.7 184.4");
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: $light;
+  will-change: transform;
+  
+  .message {
+    display: none;
+  }
+  
+  
+  .no-motionpath & {
+    width: auto;
+    height: inherit;
+    background: transparent;
+    p {
+      display: block;
+      color: $light;
+      padding: 1rem;
+      
+      a {
+        color: $light;
+        display: block;
+        padding: 1rem 0;
+      }
+    }
+  }
+}
+*/
+
+</style>
+
+<script type="text/javascript">
+
+var clickCount = 0;
+
+var color = [];
+
+color[0] = {colorHex:'#F0F8FF', colorName:'AliceBlue'};
+color[1] = {colorHex:'#FAEBD7', colorName:'AntiqueWhite'};
+color[2] = {colorHex:'#00FFFF', colorName:'Aqua'};
+color[3] = {colorHex:'#7FFFD4', colorName:'Aquamarine'};
+color[4] = {colorHex:'#F0FFFF', colorName:'Azure'};
+color[5] = {colorHex:'#F5F5DC', colorName:'Beige'};
+color[6] = {colorHex:'#FFE4C4', colorName:'Bisque'};
+color[7] = {colorHex:'#000000', colorName:'Black'};
+color[8] = {colorHex:'#FFEBCD', colorName:'BlanchedAlmond'};
+color[9] = {colorHex:'#0000FF', colorName:'Blue'};
+color[10] = {colorHex:'#8A2BE2', colorName:'BlueViolet'};
+color[11] = {colorHex:'#A52A2A', colorName:'Brown'};
+color[12] = {colorHex:'#DEB887', colorName:'BurlyWood'};
+color[13] = {colorHex:'#5F9EA0', colorName:'CadetBlue'};
+color[14] = {colorHex:'#7FFF00', colorName:'Chartreuse'};
+color[15] = {colorHex:'#D2691E', colorName:'Chocolate'};
+color[16] = {colorHex:'#FF7F50', colorName:'Coral'};
+color[17] = {colorHex:'#6495ED', colorName:'CornflowerBlue'};
+color[18] = {colorHex:'#FFF8DC', colorName:'Cornsilk'};
+color[19] = {colorHex:'#DC143C', colorName:'Crimson'};
+color[20] = {colorHex:'#00FFFF', colorName:'Cyan'};
+color[21] = {colorHex:'#00008B', colorName:'DarkBlue'};
+color[22] = {colorHex:'#008B8B', colorName:'DarkCyan'};
+color[23] = {colorHex:'#B8860B', colorName:'DarkGoldenRod'};
+color[24] = {colorHex:'#A9A9A9', colorName:'DarkGray'};
+color[25] = {colorHex:'#006400', colorName:'DarkGreen'};
+color[26] = {colorHex:'#BDB76B', colorName:'DarkKhaki'};
+color[27] = {colorHex:'#8B008B', colorName:'DarkMagenta'};
+color[28] = {colorHex:'#556B2F', colorName:'DarkOliveGreen'};
+color[29] = {colorHex:'#FF8C00', colorName:'DarkOrange'};
+color[30] = {colorHex:'#9932CC', colorName:'DarkOrchid'};
+color[31] = {colorHex:'#8B0000', colorName:'DarkRed'};
+color[32] = {colorHex:'#E9967A', colorName:'DarkSalmon'};
+color[33] = {colorHex:'#8FBC8F', colorName:'DarkSeaGreen'};
+color[34] = {colorHex:'#483D8B', colorName:'DarkSlateBlue'};
+color[35] = {colorHex:'#2F4F4F', colorName:'DarkSlateGray'};
+color[36] = {colorHex:'#00CED1', colorName:'DarkTurquoise'};
+color[37] = {colorHex:'#9400D3', colorName:'DarkViolet'};
+color[38] = {colorHex:'#FF1493', colorName:'DeepPink'};
+color[39] = {colorHex:'#00BFFF', colorName:'DeepSkyBlue'};
+color[40] = {colorHex:'#696969', colorName:'DimGray'};
+color[41] = {colorHex:'#1E90FF', colorName:'DodgerBlue'};
+color[42] = {colorHex:'#B22222', colorName:'FireBrick'};
+color[43] = {colorHex:'#FFFAF0', colorName:'FloralWhite'};
+color[44] = {colorHex:'#228B22', colorName:'ForestGreen'};
+color[45] = {colorHex:'#FF00FF', colorName:'Fuchsia'};
+color[46] = {colorHex:'#DCDCDC', colorName:'Gainsboro'};
+color[47] = {colorHex:'#F8F8FF', colorName:'GhostWhite'};
+color[48] = {colorHex:'#FFD700', colorName:'Gold'};
+color[49] = {colorHex:'#DAA520', colorName:'GoldenRod'};
+color[50] = {colorHex:'#808080', colorName:'Gray'};
+color[51] = {colorHex:'#008000', colorName:'Green'};
+color[52] = {colorHex:'#ADFF2F', colorName:'GreenYellow'};
+color[53] = {colorHex:'#F0FFF0', colorName:'HoneyDew'};
+color[54] = {colorHex:'#FF69B4', colorName:'HotPink'};
+color[55] = {colorHex:'#CD5C5C', colorName:'IndianRed'};
+color[56] = {colorHex:'#4B0082', colorName:'Indigo'};
+color[57] = {colorHex:'#FFFFF0', colorName:'Ivory'};
+color[58] = {colorHex:'#F0E68C', colorName:'Khaki'};
+color[59] = {colorHex:'#E6E6FA', colorName:'Lavender'};
+color[60] = {colorHex:'#FFF0F5', colorName:'LavenderBlush'};
+color[61] = {colorHex:'#7CFC00', colorName:'LawnGreen'};
+color[62] = {colorHex:'#FFFACD', colorName:'LemonChiffon'};
+color[63] = {colorHex:'#ADD8E6', colorName:'LightBlue'};
+color[64] = {colorHex:'#F08080', colorName:'LightCoral'};
+color[65] = {colorHex:'#E0FFFF', colorName:'LightCyan'};
+color[66] = {colorHex:'#FAFAD2', colorName:'LightGoldenRodYellow'};
+color[67] = {colorHex:'#D3D3D3', colorName:'LightGray'};
+color[68] = {colorHex:'#90EE90', colorName:'LightGreen'};
+color[69] = {colorHex:'#FFB6C1', colorName:'LightPink'};
+color[70] = {colorHex:'#FFA07A', colorName:'LightSalmon'};
+color[71] = {colorHex:'#20B2AA', colorName:'LightSeaGreen'};
+color[72] = {colorHex:'#87CEFA', colorName:'LightSkyBlue'};
+color[73] = {colorHex:'#778899', colorName:'LightSlateGray'};
+color[74] = {colorHex:'#B0C4DE', colorName:'LightSteelBlue'};
+color[75] = {colorHex:'#FFFFE0', colorName:'LightYellow'};
+color[76] = {colorHex:'#00FF00', colorName:'Lime'};
+color[77] = {colorHex:'#32CD32', colorName:'LimeGreen'};
+color[78] = {colorHex:'#FAF0E6', colorName:'Linen'};
+color[79] = {colorHex:'#FF00FF', colorName:'Magenta'};
+color[80] = {colorHex:'#800000', colorName:'Maroon'};
+color[81] = {colorHex:'#66CDAA', colorName:'MediumAquaMarine'};
+color[82] = {colorHex:'#0000CD', colorName:'MediumBlue'};
+color[83] = {colorHex:'#BA55D3', colorName:'MediumOrchid'};
+color[84] = {colorHex:'#9370DB', colorName:'MediumPurple'};
+color[85] = {colorHex:'#3CB371', colorName:'MediumSeaGreen'};
+color[86] = {colorHex:'#7B68EE', colorName:'MediumSlateBlue'};
+color[87] = {colorHex:'#00FA9A', colorName:'MediumSpringGreen'};
+color[88] = {colorHex:'#48D1CC', colorName:'MediumTurquoise'};
+color[89] = {colorHex:'#C71585', colorName:'MediumVioletRed'};
+color[90] = {colorHex:'#191970', colorName:'MidnightBlue'};
+color[91] = {colorHex:'#F5FFFA', colorName:'MintCream'};
+color[92] = {colorHex:'#FFE4E1', colorName:'MistyRose'};
+color[93] = {colorHex:'#FFE4B5', colorName:'Moccasin'};
+color[94] = {colorHex:'#FFDEAD', colorName:'NavajoWhite'};
+color[95] = {colorHex:'#000080', colorName:'Navy'};
+color[96] = {colorHex:'#FDF5E6', colorName:'OldLace'};
+color[97] = {colorHex:'#808000', colorName:'Olive'};
+color[98] = {colorHex:'#6B8E23', colorName:'OliveDrab'};
+color[99] = {colorHex:'#FFA500', colorName:'Orange'};
+color[100] = {colorHex:'#FF4500', colorName:'OrangeRed'};
+color[101] = {colorHex:'#DA70D6', colorName:'Orchid'};
+color[102] = {colorHex:'#EEE8AA', colorName:'PaleGoldenRod'};
+color[103] = {colorHex:'#98FB98', colorName:'PaleGreen'};
+color[104] = {colorHex:'#AFEEEE', colorName:'PaleTurquoise'};
+color[105] = {colorHex:'#DB7093', colorName:'PaleVioletRed'};
+color[106] = {colorHex:'#FFEFD5', colorName:'PapayaWhip'};
+color[107] = {colorHex:'#FFDAB9', colorName:'PeachPuff'};
+color[108] = {colorHex:'#CD853F', colorName:'Peru'};
+color[109] = {colorHex:'#FFC0CB', colorName:'Pink'};
+color[110] = {colorHex:'#DDA0DD', colorName:'Plum'};
+color[111] = {colorHex:'#B0E0E6', colorName:'PowderBlue'};
+color[112] = {colorHex:'#800080', colorName:'Purple'};
+color[113] = {colorHex:'#663399', colorName:'RebeccaPurple'};
+color[114] = {colorHex:'#FF0000', colorName:'Red'};
+color[115] = {colorHex:'#BC8F8F', colorName:'RosyBrown'};
+color[116] = {colorHex:'#4169E1', colorName:'RoyalBlue'};
+color[117] = {colorHex:'#8B4513', colorName:'SaddleBrown'};
+color[118] = {colorHex:'#FA8072', colorName:'Salmon'};
+color[119] = {colorHex:'#F4A460', colorName:'SandyBrown'};
+color[120] = {colorHex:'#2E8B57', colorName:'SeaGreen'};
+color[121] = {colorHex:'#FFF5EE', colorName:'SeaShell'};
+color[122] = {colorHex:'#A0522D', colorName:'Sienna'};
+color[123] = {colorHex:'#C0C0C0', colorName:'Silver'};
+color[124] = {colorHex:'#87CEEB', colorName:'SkyBlue'};
+color[125] = {colorHex:'#6A5ACD', colorName:'SlateBlue'};
+color[126] = {colorHex:'#708090', colorName:'SlateGray'};
+color[127] = {colorHex:'#FFFAFA', colorName:'Snow'};
+color[128] = {colorHex:'#00FF7F', colorName:'SpringGreen'};
+color[129] = {colorHex:'#4682B4', colorName:'SteelBlue'};
+color[130] = {colorHex:'#D2B48C', colorName:'Tan'};
+color[131] = {colorHex:'#008080', colorName:'Teal'};
+color[132] = {colorHex:'#D8BFD8', colorName:'Thistle'};
+color[133] = {colorHex:'#FF6347', colorName:'Tomato'};
+color[134] = {colorHex:'#40E0D0', colorName:'Turquoise'};
+color[135] = {colorHex:'#EE82EE', colorName:'Violet'};
+color[136] = {colorHex:'#F5DEB3', colorName:'Wheat'};
+color[137] = {colorHex:'#FFFFFF', colorName:'White'};
+color[138] = {colorHex:'#F5F5F5', colorName:'WhiteSmoke'};
+color[139] = {colorHex:'#FFFF00', colorName:'Yellow'};
+color[140] = {colorHex:'#9ACD32', colorName:'YellowGreen'};
+
+function ranNamedColor(){
+	Math.floor(Math.random() * 140);
+}
+
+
+var animal = [];
+
+animal[0] = {unicode:'&#x1F400;', animalName:'RAT'};
+animal[1] = {unicode:'&#x1F401;', animalName:'MOUSE'};
+animal[2] = {unicode:'&#x1F402;', animalName:'OX'};
+animal[3] = {unicode:'&#x1F403;', animalName:'WATER BUFFALO'};
+animal[4] = {unicode:'&#x1F404;', animalName:'COW'};
+animal[5] = {unicode:'&#x1F405;', animalName:'TIGER'};
+animal[6] = {unicode:'&#x1F406;', animalName:'LEOPARD'};
+animal[7] = {unicode:'&#x1F407;', animalName:'RABBIT'};
+animal[8] = {unicode:'&#x1F408;', animalName:'CAT'};
+animal[9] = {unicode:'&#x1F409;', animalName:'DRAGON'};
+animal[10] = {unicode:'&#x1F40A;', animalName:'CROCODILE'};
+animal[11] = {unicode:'&#x1F40B;', animalName:'WHALE'};
+animal[12] = {unicode:'&#x1F40C;', animalName:'SNAIL'};
+animal[13] = {unicode:'&#x1F40D;', animalName:'SNAKE'};
+animal[14] = {unicode:'&#x1F40E;', animalName:'HORSE'};
+animal[15] = {unicode:'&#x1F40F;', animalName:'RAM'};
+animal[16] = {unicode:'&#x1F410;', animalName:'GOAT'};
+animal[17] = {unicode:'&#x1F411;', animalName:'SHEEP'};
+animal[18] = {unicode:'&#x1F412;', animalName:'MONKEY'};
+animal[19] = {unicode:'&#x1F413;', animalName:'ROOSTER'};
+animal[20] = {unicode:'&#x1F414;', animalName:'CHICKEN'};
+animal[21] = {unicode:'&#x1F415;', animalName:'DOG'};
+animal[22] = {unicode:'&#x1F416;', animalName:'PIG'};
+animal[23] = {unicode:'&#x1F417;', animalName:'BOAR'};
+animal[24] = {unicode:'&#x1F418;', animalName:'ELEPHANT'};
+animal[25] = {unicode:'&#x1F419;', animalName:'OCTOPUS'};
+animal[26] = {unicode:'&#x1F41A;', animalName:'SPIRAL SHELL'};
+animal[27] = {unicode:'&#x1F41B;', animalName:'BUG'};
+animal[28] = {unicode:'&#x1F41C;', animalName:'ANT'};
+animal[29] = {unicode:'&#x1F41D;', animalName:'HONEYBEE'};
+animal[30] = {unicode:'&#x1F41E;', animalName:'LADY BEETLE'};
+animal[31] = {unicode:'&#x1F41F;', animalName:'FISH'};
+animal[32] = {unicode:'&#x1F420;', animalName:'TROPICAL FISH'};
+animal[33] = {unicode:'&#x1F421;', animalName:'BLOWFISH'};
+animal[34] = {unicode:'&#x1F422;', animalName:'TURTLE'};
+animal[35] = {unicode:'&#x1F423;', animalName:'HATCHING CHICK'};
+animal[36] = {unicode:'&#x1F424;', animalName:'BABY CHICK'};
+animal[37] = {unicode:'&#x1F425;', animalName:'FRONT-FACING BABY CHICK'};
+animal[38] = {unicode:'&#x1F426;', animalName:'BIRD'};
+animal[39] = {unicode:'&#x1F427;', animalName:'PENGUIN'};
+animal[40] = {unicode:'&#x1F428;', animalName:'KOALA'};
+animal[41] = {unicode:'&#x1F429;', animalName:'POODLE'};
+animal[42] = {unicode:'&#x1F42A;', animalName:'DROMEDARY CAMEL'};
+animal[43] = {unicode:'&#x1F42B;', animalName:'BACTRIAN CAMEL'};
+animal[44] = {unicode:'&#x1F42C;', animalName:'DOLPHIN'};
+animal[45] = {unicode:'&#x1F42D;', animalName:'MOUSE FACE'};
+animal[46] = {unicode:'&#x1F42E;', animalName:'COW FACE'};
+animal[47] = {unicode:'&#x1F42F;', animalName:'TIGER FACE'};
+animal[48] = {unicode:'&#x1F430;', animalName:'RABBIT FACE'};
+animal[49] = {unicode:'&#x1F431;', animalName:'CAT FACE'};
+animal[50] = {unicode:'&#x1F432;', animalName:'DRAGON FACE'};
+animal[51] = {unicode:'&#x1F433;', animalName:'SPOUTING WHALE'};
+animal[52] = {unicode:'&#x1F434;', animalName:'HORSE FACE'};
+animal[53] = {unicode:'&#x1F435;', animalName:'MONKEY FACE'};
+animal[54] = {unicode:'&#x1F436;', animalName:'DOG FACE'};
+animal[55] = {unicode:'&#x1F437;', animalName:'PIG FACE'};
+animal[56] = {unicode:'&#x1F438;', animalName:'FROG FACE'};
+animal[57] = {unicode:'&#x1F439;', animalName:'HAMSTER FACE'};
+animal[58] = {unicode:'&#x1F43A;', animalName:'WOLF FACE'};
+animal[59] = {unicode:'&#x1F43B;', animalName:'BEAR FACE'};
+animal[60] = {unicode:'&#x1F43C;', animalName:'PANDA FACE'};
+animal[61] = {unicode:'&#x1F43D;', animalName:'PIG NOSE'};
+animal[62] = {unicode:'&#x1F43E;', animalName:'PAW PRINTS'};
+animal[63] = {unicode:'&#x1F43F;', animalName:'CHIPMUNK'};
+
+
+function appSelector(){
+	clickCount += 1 ;
+
+// next feature - 
+//               top-banner shake 一 shake
+
+// document.getElementById("top-banner").color = color[0]["colorHex"] ;
+// document.getElementById("top-banner").innerHTML = color[0]["colorHex"] ;
+
+	if(clickCount < 10){
+		changeTextColor();
+	}else{
+		document.getElementById("top-banner").style.display = "none" ; 
+		showAnimals();
+	}
+}
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+
+
+function changeTextColor(){
+	// var color = getRandomColor();
+	// console.log("new gen color is: "+ color);
+	 // document.body.style.backgroundColor =  getRandomColor() ;
+	 console.log("Inside changeTextColor(). You have clicked " + clickCount + " times.") ;
+	 document.getElementById("top-banner").style.color =  getRandomColor() ;
+}
+
+function showAnimals(){
+
+console.log("Inside showAnimals(). You have clicked " + clickCount + "times.") ;
+	var ranNamedColor = color[Math.floor(Math.random() * 140)] ;
+	var ranAnimal     = animal[Math.floor(Math.random() * 63)] ;
+
+	document.getElementById("animal").style.color = ranNamedColor["colorHex"];
+	document.getElementById("animal").innerHTML =  ranAnimal["unicode"] + "<br>" + ranAnimal["animalName"] ;
+}
+
+
+// var m = document.querySelectorAll('.mover');
+
+// if (m[0].style.motionOffset !== undefined) {
+//   var time = 9000;
+//   for (var i = 0, len = m.length; i < len; ++i) {
+//     var player = m[i].animate([
+//       { motionOffset: '100%' },
+//       { motionOffset: 0 }
+//     ], {
+//       duration: time,
+//       iterations: Infinity,
+//       fill: 'both',
+//       easing: 'ease-in',
+//       delay: time * (i / m.length)
+//     });
+//     var scaler = m[i].animate([
+//       { transform: 'scale(.01)', opacity: .01, offset: 0 },
+//       { transform: 'scale(1)', opacity: 1, offset: .01 },
+//       { transform: 'scale(.01)', opacity: .01, offset: 1 }
+//     ], {
+//       duration: time,
+//       iterations: Infinity,
+//       direction: 'normal',
+//       fill: 'both',
+//       easing: 'cubic-bezier(0.55,0.055,0.675,0.19)',
+//       delay: time * (i / m.length)
+//     });
+//   }
+// } else {
+//   document.documentElement.className = 'no-motionpath'
+// }
+
+
+</script>
+
+
+
+</head>
+<body>
+	<div id="background" onclick="appSelector()">
+		
+		<div id="top-banner">
+		&#x1f476; 朗朗—生日快樂 &#x1f476;	
+		</div>
+
+		<div id="animal" >
+			
+		</div>
+
+		<!-- 
+		<div class="mover"></div>
+		<div class="mover"></div>
+		 -->
+ 	
+<!-- 		<svg id="rainbow">
+		    <path id="path" fill="#333333" stroke="#dddddd" stroke-width="9" stroke-linejoin="round" d="M248.761,92c0,9.801-7.93,17.731-17.71,17.731c-0.319,0-0.617,0-0.935-0.021c-10.035,37.291-51.174,65.206-100.414,65.206 c-49.261,0-90.443-27.979-100.435-65.334c-0.765,0.106-1.531,0.149-2.317,0.149c-9.78,0-17.71-7.93-17.71-17.731 c0-9.78,7.93-17.71,17.71-17.71c0.787,0,1.552,0.042,2.317,0.149C39.238,37.084,80.419,9.083,129.702,9.083    c49.24,0,90.379,27.937,100.414,65.228h0.021c0.298-0.021,0.617-0.021,0.914-0.021C240.831,74.29,248.761,82.22,248.761,92z" />
+		</svg> -->
+		<div id="imageSearch" display="none">
+			睇更多 insert unicode 嘅圖片
+		</div>
+
+		<div id="colorChineseLookup">
+			依隻顏色嘅中文係咩呢？
+		</div>
+	</div>
+</body>
+</html>
