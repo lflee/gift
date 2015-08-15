@@ -28,6 +28,7 @@
  #top-banner {
  	width: 100%;
  	text-align: center;
+ 	vertical-align: center;
  	font-size: xx-large;
  	margin: auto;
  	color: black;
@@ -41,6 +42,7 @@
 }
 
 #rainbow {
+	font-size: xx-large;
 	width:100%;
 	height:100%;
 	position: absolute;
@@ -49,14 +51,27 @@
 }
 
 #imageSearch{
-	width:50%;
-	display: none;
-	
+	font-size: x-large;
+	width: 100%;
+	visibility: hidden;
+	z-index: 9;
+	text-align: center;
 }
 
-#colorChineseLookup{
-	width:50%;
-	display: none;
+#objectChineseTranslate{
+	font-size: x-large;
+	width: 100%;
+	visibility: hidden;
+	z-index: 9;
+	text-align: center;
+}
+
+#colorChineseTranslate{
+	font-size: x-large;
+	width: 100%;
+	visibility: hidden;
+	z-index: 9;
+	text-align: center;
 }
 
 /*
@@ -263,9 +278,6 @@ color[138] = {colorHex:'#F5F5F5', colorName:'WhiteSmoke'};
 color[139] = {colorHex:'#FFFF00', colorName:'Yellow'};
 color[140] = {colorHex:'#9ACD32', colorName:'YellowGreen'};
 
-function ranNamedColor(){
-	Math.floor(Math.random() * 140);
-}
 
 
 var animal = [];
@@ -335,6 +347,8 @@ animal[61] = {unicode:'&#x1F43D;', animalName:'PIG NOSE'};
 animal[62] = {unicode:'&#x1F43E;', animalName:'PAW PRINTS'};
 animal[63] = {unicode:'&#x1F43F;', animalName:'CHIPMUNK'};
 
+var ranAnimal;
+var ranNamedColor;
 
 function appSelector(){
 	clickCount += 1 ;
@@ -345,14 +359,22 @@ function appSelector(){
 // document.getElementById("top-banner").color = color[0]["colorHex"] ;
 // document.getElementById("top-banner").innerHTML = color[0]["colorHex"] ;
 
-	if(clickCount < 10){
+	if(clickCount < 7){
 		changeTextColor();
-	}else{
-		document.getElementById("top-banner").style.display = "none" ; 
-		showAnimals();
+	}else{if(clickCount < 10){
+		document.getElementById("top-banner").innerHTML = "&#x1F381; <br> 有禮物！？" ; 
+		changeTextColor();
+	}else{if(clickCount < 11){
+		document.getElementById("top-banner").innerHTML = "齊來學動物、顏色、英文！" ;
+		changeTextColor(); 
+		}else{
+			document.getElementById("top-banner").style.display = "none" ; 
+			changeTextColor();
+			showAnimals();
+			}
+		}
 	}
 }
-
 function getRandomColor() {
     var letters = '0123456789ABCDEF'.split('');
     var color = '#';
@@ -361,9 +383,6 @@ function getRandomColor() {
     }
     return color;
 }
-
-
-
 
 function changeTextColor(){
 	// var color = getRandomColor();
@@ -376,11 +395,45 @@ function changeTextColor(){
 function showAnimals(){
 
 console.log("Inside showAnimals(). You have clicked " + clickCount + "times.") ;
-	var ranNamedColor = color[Math.floor(Math.random() * 140)] ;
-	var ranAnimal     = animal[Math.floor(Math.random() * 63)] ;
+	ranNamedColor = color[Math.floor(Math.random() * 140)] ;
+	ranAnimal     = animal[Math.floor(Math.random() * 63)] ;
 
 	document.getElementById("animal").style.color = ranNamedColor["colorHex"];
 	document.getElementById("animal").innerHTML =  ranAnimal["unicode"] + "<br>" + ranAnimal["animalName"] ;
+
+
+
+	document.getElementById("imageSearch").style.visibility = "visible";
+	document.getElementById("imageSearch").innerHTML = "睇更多 " + ranAnimal["animalName"] + "嘅圖片" ;
+
+	document.getElementById("objectChineseTranslate").style.visibility = "visible";
+	document.getElementById("objectChineseTranslate").innerHTML = ranAnimal["animalName"] + " 嘅中文" ;
+
+	document.getElementById("colorChineseTranslate").style.visibility = "visible";
+	document.getElementById("colorChineseTranslate").innerHTML = ranNamedColor["colorName"] + " 依隻顏色嘅中文係咩呢？" ;
+
+
+// https://www.google.com/search?q=fish&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMIke2e5r2rxwIVzluOCh1MjA7T&qscrl=1
+// https://www.google.com/search?q=sheep&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&ved=0CAYQ_AUoAWoVChMIoInohr6rxwIVDB6OCh2R2ABG&qscrl=1
+
+}
+
+function imageSearch(){
+	url = "https://www.google.com/search?q=" + ranAnimal["animalName"] + "&newwindow=1&hl=en&biw=1280&bih=658&site=webhp&source=lnms&tbm=isch&sa=X&qscrl=1" ;
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+function objectChineseTranslate(){
+	url = "https://translate.google.com/#en/zh-TW/" + ranAnimal["animalName"].toLowerCase() ;
+  var win = window.open(url, '_blank');
+  win.focus();
+}
+
+function colorChineseTranslate(){
+	url = "https://translate.google.com/#en/zh-TW/" + ranNamedColor["colorName"].toLowerCase() ;
+  var win = window.open(url, '_blank');
+  win.focus();
 }
 
 
@@ -441,13 +494,15 @@ console.log("Inside showAnimals(). You have clicked " + clickCount + "times.") ;
 <!-- 		<svg id="rainbow">
 		    <path id="path" fill="#333333" stroke="#dddddd" stroke-width="9" stroke-linejoin="round" d="M248.761,92c0,9.801-7.93,17.731-17.71,17.731c-0.319,0-0.617,0-0.935-0.021c-10.035,37.291-51.174,65.206-100.414,65.206 c-49.261,0-90.443-27.979-100.435-65.334c-0.765,0.106-1.531,0.149-2.317,0.149c-9.78,0-17.71-7.93-17.71-17.731 c0-9.78,7.93-17.71,17.71-17.71c0.787,0,1.552,0.042,2.317,0.149C39.238,37.084,80.419,9.083,129.702,9.083    c49.24,0,90.379,27.937,100.414,65.228h0.021c0.298-0.021,0.617-0.021,0.914-0.021C240.831,74.29,248.761,82.22,248.761,92z" />
 		</svg> -->
-		<div id="imageSearch" display="none">
-			睇更多 insert unicode 嘅圖片
+		<div id="imageSearch" onclick="imageSearch()">
 		</div>
 
-		<div id="colorChineseLookup">
-			依隻顏色嘅中文係咩呢？
+		<div id="objectChineseTranslate" onclick="objectChineseTranslate()">
 		</div>
+
+		<div id="colorChineseTranslate" onclick="colorChineseTranslate()">
+		</div>
+
 	</div>
 </body>
 </html>
