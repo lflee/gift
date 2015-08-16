@@ -25,9 +25,10 @@
 
 	text-shadow: 0.5px 0.5px #ffffff, 1px 1px #000000;	
 
+	padding-top: 10%;
 
  	font-size: 300%;
- 	margin: auto;
+ 	/*margin: auto;*/
  	color: black;
  	z-index: 11;
  
@@ -373,10 +374,11 @@ function appSelector(){
 	if(clickCount < 7){
 		changeTextColor();
 	}else{if(clickCount < 10){
-		document.getElementById("top-banner").innerHTML = "&#x1F381; <br> 有禮物！？" ; 
+		document.getElementById("top-banner").innerHTML = "&#x1F381;<br>有禮物！？" ; 
 		changeTextColor();
 	}else{if(clickCount < 11){
-		document.getElementById("top-banner").innerHTML = "齊來學動物、顏色、英文！" ;
+		document.getElementById("top-banner").style.fontSize  = "250%" ;
+		document.getElementById("top-banner").innerHTML = "&#x1f4d6;<br>一齊嚟學動物、顏色、英文！" ;
 		changeTextColor(); 
 		}else{
 			document.getElementById("top-banner").style.display = "none" ; 
@@ -441,6 +443,8 @@ function colorChineseTranslate(){
 </head>
 <body>
 		<div id="top-banner" onclick="appSelector()">
+		&#x1f382;
+		<br>
 		&#x1f476; 朗朗—生日快樂 &#x1f476;	
 		</div>
 
