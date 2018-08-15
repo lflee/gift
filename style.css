@@ -1,7 +1,148 @@
-body {
-    margin: 0;
+html, body {
+    margin: 0 ;
+    height: 100% ;
+    background: linear-gradient(112.5deg, powderblue, white, lightyellow) ;
+    align-content: center ;
 }
 
-#outerContainer {
-  background: linear-gradient(112.5deg, powderblue, white, lightyellow)
+.emoji {
+    font-size: 500% ;
+}
+
+
+
+#top-banner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+
+   text-shadow: 0.5px 0.5px #ffffff, 1px 1px #000000;	
+
+   padding-top: 10%;
+
+    font-size: 300%;
+    /*margin: auto;*/
+    color: black;
+    z-index: 11;
+
+   animation-name: boinboin;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-delay: 4s;
+}
+
+
+@keyframes boinboin {
+   0% {
+       transform: scale(1,1);
+       }
+   10% {
+       transform: scale(1.2,1.2);
+       }
+   20% {
+       transform: scale(0.9,0.9);
+       }
+   30% {
+           transform: scale(1.1,1.1);
+         }
+     40% {
+       transform: scale(0.9,0.9);
+       }
+     50%{
+       transform: scale(1,1);
+         }
+     100%{
+       transform: scale(1,1);
+         }
+}
+
+
+
+#animal{
+   font-size: 400%;
+   /*font-weight: bold;*/
+   text-align: center;
+
+   text-shadow: 1px 1px #ffffff, 2px 2px #000000;
+
+   vertical-align: center;
+
+   animation-name: boinboin;
+   animation-duration: 3s;
+
+   animation-iteration-count: infinite;
+}
+
+#imageSearch{
+   font-size: x-large;
+   width: 100%;
+   visibility: hidden;
+   z-index: 9;
+   text-align: center;
+   border-style: solid;
+   border-width: 3px;
+   padding: 5px;
+
+   animation-name: swing;
+   animation-duration: 10s;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+}
+
+#objectChineseTranslate{
+   font-size: x-large;
+   width: 100%;
+   visibility: hidden;
+   z-index: 9;
+   text-align: center;
+   border-style: solid;
+   border-width: 3px;
+   padding: 5px;
+
+   animation-name: swing;
+   animation-duration: 11s;
+   animation-delay: 2s;
+   animation-iteration-count: infinite;
+}
+
+#colorChineseTranslate{
+   font-size: x-large;
+   width: 100%;
+   visibility: hidden;
+   z-index: 9;
+   text-align: center;
+   border-style: solid;
+   border-width: 3px;
+   text-shadow: 0.5px 0.5px #ffffff, 1px 1px #000000;
+   padding: 5px;
+
+   animation-name: swing;
+   animation-duration: 12s;
+   animation-delay: 3s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes swing {
+   0% {
+       transform: translate(0px,0px);
+       }
+   10% {
+       transform: translate(-15px,0px);
+       }
+   20% {
+       transform: translate(10px,0px);
+       }
+   30% {
+           transform: translate(-5px,0px);
+         }
+     40% {
+       transform: translate(0px,0px);
+       }
+     50%{
+       transform: translate(0px,0px);
+         }
+     100%{
+       transform: translate(0px,0px);
+         }
 }
