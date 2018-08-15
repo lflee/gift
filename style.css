@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+}
+
+#outerContainer {
+  background: linear-gradient(112.5deg, powderblue, white, lightyellow)
+}
